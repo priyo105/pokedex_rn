@@ -50,6 +50,25 @@
 	<key>UIAppFonts</key>
 	<array>
 		<string>RobotoCondensed-Regular.ttf</string>
+		<string>Oxygen-Regular.ttf</string>
+		<string>Jacquard24-Regular.ttf</string>
+		<string>RobotoCondensed-Black.ttf</string>
+		<string>RobotoCondensed-BlackItalic.ttf</string>
+		<string>RobotoCondensed-Bold.ttf</string>
+		<string>RobotoCondensed-BoldItalic.ttf</string>
+		<string>RobotoCondensed-ExtraBold.ttf</string>
+		<string>RobotoCondensed-ExtraBoldItalic.ttf</string>
+		<string>RobotoCondensed-ExtraLight.ttf</string>
+		<string>RobotoCondensed-ExtraLightItalic.ttf</string>
+		<string>RobotoCondensed-Italic.ttf</string>
+		<string>RobotoCondensed-Light.ttf</string>
+		<string>RobotoCondensed-LightItalic.ttf</string>
+		<string>RobotoCondensed-Medium.ttf</string>
+		<string>RobotoCondensed-MediumItalic.ttf</string>
+		<string>RobotoCondensed-SemiBold.ttf</string>
+		<string>RobotoCondensed-SemiBoldItalic.ttf</string>
+		<string>RobotoCondensed-Thin.ttf</string>
+		<string>RobotoCondensed-ThinItalic.ttf</string>
 	</array>
 </dict>
 </plist>

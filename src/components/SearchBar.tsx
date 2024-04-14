@@ -11,7 +11,7 @@ export default function SearchBar() {
       />
       <TextInput
         style={styles.input}
-        placeholder="Search..."
+        placeholder="Search Pokemon ..."
         placeholderTextColor="gray"
       />
     </View>
