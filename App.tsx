@@ -4,6 +4,7 @@ import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import Home from './src/screens/Home';
 
 import {} from 'react-native/Libraries/NewAppScreen';
+import PokeDetails from './src/screens/PokeDetails';
 
 function App(): React.JSX.Element {
   const Stack = createNativeStackNavigator();
@@ -15,6 +16,11 @@ function App(): React.JSX.Element {
           name="Home"
           options={{headerShown: false}}
           component={Home}
+        />
+        <Stack.Screen
+          name="details"
+          options={{headerShown: false}}
+          component={PokeDetails}
         />
       </Stack.Navigator>
     </NavigationContainer>

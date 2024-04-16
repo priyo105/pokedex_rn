@@ -16,8 +16,8 @@ export default function Card({children, color}: CardProps) {
       height: 150,
       width: 150,
       marginVertical: 5,
-      elevation: 5, // for shadow on Android
-      shadowColor: '', // for shadow on iOS
+      elevation: 5,
+      shadowColor: '',
       shadowOffset: {
         width: 0,
         height: 2,

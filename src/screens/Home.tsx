@@ -12,9 +12,8 @@ import styles from '../styles';
 const Home: React.FC = () => {
   const [pokeList, setPokeList] = useState<PokeList>();
   const [nextPageUrl, setNextPageUrl] = useState('');
-
   useEffect(() => {
-    getAllPokemon({offset: 0, limit: 100})
+    getAllPokemon({offset: 0, limit: 20})
       .then(response => {
         setPokeList(response);
         setNextPageUrl(response.next);
