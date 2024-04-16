@@ -1,5 +1,5 @@
 /* eslint-disable prettier/prettier */
-import {StyleSheet} from 'react-native';
+import {Dimensions, StyleSheet} from 'react-native';
 
 const styles = StyleSheet.create({
   headerText: {
@@ -17,6 +17,26 @@ const styles = StyleSheet.create({
   headerIcon: {
     height: 40,
     width: 40,
+  },
+  imageContainer: {
+    height: 100,
+    width: 100,
+  },
+  spaceAroundView: {
+    flexDirection: 'row',
+    justifyContent: 'space-around',
+  },
+  smallText: {
+    fontSize: 12,
+    fontFamily: 'RobotoCondensed-Bold',
+  },
+  flashListDimensions: {
+    height: Dimensions.get('screen').height - 250,
+    width: Dimensions.get('screen').width,
+  },
+  basicPaddingAndMargin: {
+    padding: 5,
+    margin: 10,
   },
 });
 
