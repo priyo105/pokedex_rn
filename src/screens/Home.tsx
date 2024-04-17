@@ -1,6 +1,6 @@
 /* eslint-disable prettier/prettier */
 import React, {useEffect, useState} from 'react';
-import {View, Text} from 'react-native';
+import {View} from 'react-native';
 import SearchBar from '../components/SearchBar';
 import Header from '../components/Header';
 import getAllPokemon, {
@@ -12,10 +12,9 @@ import PokeCard from '../components/PokeCard';
 import {FlashList} from '@shopify/flash-list';
 import styles from '../styles';
 
-const Home: React.FC = () => {
+const Home = () => {
   const [pokeList, setPokeList] = useState<PokeList>();
   const [nextPageUrl, setNextPageUrl] = useState('');
-
   const [searchTerm, setSearchTerm] = useState('');
   const [focus, setFocus] = useState(false);
   const [searchedPokemon, setSearchedPokemon] = useState<Pokemon[]>();
@@ -46,6 +45,7 @@ const Home: React.FC = () => {
   }, []);
 
   const fetchMoreData = async () => {
+    // when end reached of the offset, search more data from API
     try {
       const response = await getMorePokemonFromUrl(nextPageUrl);
       setNextPageUrl(response.next);
@@ -66,7 +66,7 @@ const Home: React.FC = () => {
         onSearchTermChange={handleSearchTermChange}
       />
 
-      {focus === false && pokeList ? (
+      {focus === false && pokeList ? ( //Normal Pokemon List
         <View style={styles.flashListDimensions}>
           <FlashList
             data={pokeList.results}
@@ -78,14 +78,13 @@ const Home: React.FC = () => {
           />
         </View>
       ) : (
+        //searchview List
         <View style={styles.flashListDimensions}>
           <FlashList
             data={searchedPokemon}
             numColumns={2}
             renderItem={({item}) => <PokeCard pokemon={item} />}
             estimatedItemSize={1000}
-            onEndReached={fetchMoreData}
-            onEndReachedThreshold={0.2}
           />
         </View>
       )}

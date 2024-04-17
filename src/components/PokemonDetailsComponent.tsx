@@ -28,11 +28,14 @@ const PokemonDetailsComponent = ({
         style={styles.largeImage}
       />
       <PokeType type={details?.types} />
+
       <AbilitiesCard
         abilities={details?.abilities}
         type={details?.types[0].type.name}
       />
+
       <PokeStats stats={details?.stats} type={details?.types[0].type.name} />
+
       <EvoultionChain id={details?.id} />
     </ScrollView>
   );

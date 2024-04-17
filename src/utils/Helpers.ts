@@ -1,5 +1,3 @@
-import {IMAGE_URL} from '../../config';
-
 /* eslint-disable prettier/prettier */
 export function capitalizeFirstLetter(word: string | undefined): string {
   if (!word) return ''; // Return empty string if word is undefined
