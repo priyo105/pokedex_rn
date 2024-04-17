@@ -2,7 +2,7 @@
 import React from 'react';
 import {Image, StyleSheet, TextInput, View} from 'react-native';
 
-export default function SearchBar() {
+export default function SearchBar({onSearchTermChange, onFocus}: any) {
   return (
     <View style={styles.container}>
       <Image
@@ -11,6 +11,8 @@ export default function SearchBar() {
       />
       <TextInput
         style={styles.input}
+        onChangeText={onSearchTermChange}
+        onFocus={onFocus}
         placeholder="Search Pokemon ..."
         placeholderTextColor="gray"
       />

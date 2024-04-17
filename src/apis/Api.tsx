@@ -2,6 +2,7 @@
 
 import axios from 'axios';
 import {API_URL} from '../../config';
+import {Pokemon} from '../types/PokeList';
 
 interface PaginationParams {
   offset: number;
@@ -54,3 +55,24 @@ export async function getEvolutionChain(url: string) {
     return null;
   }
 }
+
+export const fetchPokemonSuggestions = async (
+  term: string,
+): Promise<{name: string; url: string}[]> => {
+  try {
+    let url = API_URL + '/?offset=' + 0 + '&limit=' + 1000;
+
+    const response = await axios.get<{results: Pokemon[]}>(url);
+    const pokemonNamesAndUrls = response.data.results.map(pokemon => ({
+      name: pokemon.name,
+      url: pokemon.url,
+    }));
+    const suggestions = pokemonNamesAndUrls.filter(pokemon =>
+      pokemon.name.toLowerCase().includes(term.toLowerCase()),
+    );
+    return suggestions;
+  } catch (error) {
+    console.error(error);
+    return [];
+  }
+};
