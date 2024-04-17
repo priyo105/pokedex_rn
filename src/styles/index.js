@@ -88,7 +88,7 @@ const styles = StyleSheet.create({
   },
   centeredsmallWhiteText: {
     textAlign: 'center',
-    margin: 10,
+    margin: 8,
     color: 'white',
     fontSize: 11,
     fontFamily: 'RobotoCondensed-Bold',

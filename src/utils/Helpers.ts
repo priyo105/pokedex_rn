@@ -1,3 +1,5 @@
+import {IMAGE_URL} from '../../config';
+
 /* eslint-disable prettier/prettier */
 export function capitalizeFirstLetter(word: string | undefined): string {
   if (!word) return ''; // Return empty string if word is undefined
@@ -57,4 +59,13 @@ export function getRandomColor() {
     .padStart(2, '0')}${b.toString(16).padStart(2, '0')}`;
 
   return color;
+}
+
+export function extractNumberFromUrl(url: string | undefined): string | null {
+  if (!url) {
+    return null;
+  }
+
+  const parts = url.split('/');
+  return parts[parts.length - 2];
 }

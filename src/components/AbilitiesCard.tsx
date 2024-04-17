@@ -24,7 +24,7 @@ const AbilitiesCard = ({abilities}: AbilitiesProps) => {
             key={index}>
             <Text style={styles.centeredsmallWhiteText}>
               {' '}
-              {capitalizeFirstLetter(ability.ability.name)}
+              {capitalizeFirstLetter(ability.ability.name.trim())}
             </Text>
           </View>
         ))}
